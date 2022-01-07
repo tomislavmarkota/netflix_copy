@@ -1,0 +1,18 @@
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border{
+    border-top: 8px solid $border-top;
+}
+
+@mixin layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+}

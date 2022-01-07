@@ -1,0 +1,708 @@
+@import "partials/colors";
+@import "partials/mixins";
+@import "partials/font";
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+}
+
+
+body{
+    background-color: $primary1;
+    color: $primary2;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+    //*************** HEADER STYLING ****************************
+.header-background{
+    background: url("../src/HR-en-20210823-popsignuptwoweeks-perspective_alpha_website_large.jpg") no-repeat center center/cover;
+    height: 80vh;
+}
+
+.header-background-gradient {
+    background: rgba(0,0,0,.4);
+    background-image: linear-gradient(to top,rgba(0, 0, 0,.8) 0, rgba(0,0,0,0) 60%, rgba(0,0,0,.8) 100% );
+    height: 100%;
+}
+
+.header-content-wrapper{
+    padding: 10px;
+}
+
+.header-top-section{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.logo{
+    flex-basis: 80%;
+    img{
+        margin-left: 15px;
+        max-width: 220px;
+        width: 100%;
+        height: 10vh;
+    }
+}
+
+.selekt-area{
+    .icons-align{
+    margin-left: 100px;
+    flex-basis: 20%;
+    display: flex;
+    padding: 10px;
+    position: relative;
+        #icon-1{
+            position: absolute;
+            font-size: 14px;
+            top: 38%;
+            left: 7%;
+            pointer-events: none;
+        }
+        #icon-2{
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            pointer-events: none;
+        }
+        .selekt{                           
+            font-size: 0.9rem;
+            appearance: none;
+            height: 35px;
+            width: 100%;
+            max-width: 120px;
+            min-width: 100px;
+            color: $primary2;
+            background: transparent;
+            text-align: center;
+            margin-right: 30px;
+            option{
+                background: $labelcolor; 
+            }
+        }
+        .btn-signin{
+            width: 100%;
+            max-width: 100px;
+            min-width: 80px;
+            height: 35px;
+            font-size: 0.9rem;
+            background: $primary4;
+            background-image: linear-gradient(to bottom,#e50914,#db0510);
+            text-align: center;
+            padding: 7px;
+            text-decoration: none;
+            color: $primary2;
+            border-radius: 2px; 
+        }
+    }    
+}
+                    
+                
+.header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+    h2{
+        font-weight: 100;
+    }
+    p{
+        color: $primary2;
+    }
+}
+.title-wrapper{
+    max-width: 680px;
+    text-align: center;
+    h1{
+        font-size: 3.5rem;
+    }
+}
+
+.search-form{
+    position: relative;
+    #search{
+        margin-top: 30px;
+        width: 400px;
+        height: 50px;
+        border: solid 1px #8c8c8c;
+        border-radius: 2px;
+        padding: 10px 10px 0;
+    }   
+}
+//*********************** AJAX CONTENT STYLE ***************************
+.err-text p{
+    color: red;
+    margin-top: 20px;
+}
+.ajax-matches{
+    margin: 0;
+    padding: 15px;
+    background: $primary3;
+    border-bottom: 1px solid $primary1;
+    border-radius: 2px;
+}    
+                
+//*************** FIRST SECTION *****************************
+
+section{
+    @include border;
+    padding: 50px 15%;
+}
+.content-wrapper{
+    @include layout;
+}
+.left-flex-item{
+    flex-basis: 50%;
+    z-index: -2;
+}
+.right-flex-item{
+    flex-basis: 50%;
+}
+.tv-container{
+    position: relative;
+    max-width: 100%;
+    z-index: -2;
+    img{
+        max-width: 100%;
+    }
+    .video-container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        video{
+            width: 100%;
+            max-width: 73%;
+            max-height: 54%;
+            position: absolute;
+            top: 20%;
+            left: 14%;
+            z-index: -1;
+        }  
+    }
+}
+
+         
+    
+// SECOND SECTION
+
+.left-container{
+    flex-basis: 50%;
+}
+
+.right-container{
+    flex-basis: 50%;
+}
+
+.mobile-wrapper{
+    position: relative;
+    margin-right: 20px;
+}
+.background-img{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+.mob-animation-container{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: flex-start;
+    background: $primary1;
+    width: 60%;
+    min-width: 15em;
+    height: 90px;
+    border: 2px solid $primary3;
+    box-shadow: 0 0 2em 0 $primary1;
+    border-radius: .75em;
+    align-items: center;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.img-box{
+    padding: 10px;
+    width: auto;
+    height: 100%;
+    img{
+        margin-right: 20px;
+        max-width: 100%;
+        height: 100%;
+    }
+}
+.mobile-text{
+    flex-basis: 50%;
+    .text-2{
+        color: $downloading;
+    }
+}
+.dwnl-animation{
+    img{
+        max-height: 70px;
+    }
+}
+
+    //*************** THIRD WATCH EVERYWHERE SECTION *****************************
+         
+
+.tv-container-2{
+    position: relative;
+    width: 100%;
+    img{
+        max-width: 100%;
+    }
+    .video-container-2{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 20%;
+        left: 14%;
+        video{
+            width: 100%;
+            max-width: 62%;
+            max-height: 54%;
+            position: absolute;
+            top: -20px;
+            left: 12px;
+            z-index: -1;
+        }  
+    }
+}
+
+           
+    
+//*************** FOURTH KIDS SECTION *****************************
+  
+.left-flex-item-1{
+    flex-basis: 50%;
+    img{
+        max-width: 100%;
+    }
+}
+
+
+//*************** FAQ SECTION STYLE *****************************
+
+#faq-section{
+    h1{
+        text-align: center;
+    }
+}
+.faq-wrapper{
+    width: 100%;
+    max-width: 815px;
+    margin: auto;
+    h1{
+        text-align: center;
+    }
+}
+.acc-item{
+    background: $primary3;
+    margin: 10px;
+}
+.acc-title{
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    font-weight: 100;
+    &::after{
+        content: "+";
+        position: absolute;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 40px;
+        font-weight: 100;
+        top: 10%;
+        right: 10%;
+    }
+    &.active::after{
+        transform: rotate(45deg);
+    }
+}
+.acc-body{
+   max-height: 0;
+   transition: max-height .25s cubic-bezier(.5,0,.1,1);
+   overflow: hidden;
+   
+}
+.acc-content{
+    border-top: 1px solid $primary1;
+    padding: 20px;
+    p{
+        color: $primary2;
+    }
+}
+
+
+//*************** EMAIL INPUT FORM + BUTTON *****************************
+.email-form{
+    h4{
+        text-align: center;
+        font-weight: 100;
+        margin-top: 70px;
+    }
+}
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 740px;
+    margin: auto;
+}
+.input-container{
+    position: relative;
+    width: 100%;
+    .placeLabel{
+        position: absolute;
+        color: $labelcolor;
+        top: 40%;
+        left: 2%;
+    }  
+    input[type="email"]:focus + .placeLabel{
+        position: absolute;
+        color: $labelcolor;
+        font-size: 12px;
+        font-weight: bold;
+        top:  10%;
+        left: 2%;
+        transition: font .1s ease,top .1s ease,transform .1s ease,-webkit-transform .1s ease,-moz-transform .1s ease,-o-transform .1s ease;    
+    }
+    input[type="email"]{
+        width: 100%;
+        height: 60px;
+        font-size: 16px;
+        border: solid 1px #8c8c8c;
+        display: block;
+        border-radius: 2px;
+        padding: 10px 10px 0;
+    }
+}
+.button-wrapper{
+    button{
+        margin: 0!important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        width: 214px;
+        height: 60px;
+        background: $primary4;
+        background-image: linear-gradient(to bottom,#e50914,#db0510);
+        font-size: 1.625rem;
+        color: $primary2;
+        border: none;
+        border-radius: 0 2px 2px 0;
+        span{
+           margin-left: 15px;
+        }
+        svg{
+            position: absolute;
+            top: 32%;
+            left: 78%;
+            
+        }
+    }
+}
+ 
+.footer-wrapper{
+    @include border;
+    padding: 50px 15%;
+    min-width: 190px;
+    width: 100%;
+    margin-top: 80px;
+}
+.cotent-wrapper-ftr{
+padding: 70px 45px;
+max-width: 1000px;
+margin: auto;
+}
+
+.footer-top{
+    margin-bottom: 40px;
+    a{
+        color: $footertext;
+        text-decoration: none;
+    }
+}
+
+.footer-links{
+    padding: 0;
+}
+
+.footer-link{
+    list-style: none;
+    min-width: 100px;
+    display: inline-block;
+    width: 22%;
+    margin-bottom: 25px;
+    margin-right: 20px;
+    padding-right: 12px;
+    vertical-align: top; 
+    a{
+        text-decoration: none;
+        color: $footertext;
+    }
+}
+
+.selekt-area2{
+    color: $footertext;
+    .icons-align{
+    display: flex;
+    position: relative;
+    min-width: 120px;
+    max-width: 120px;
+        #icon-1{
+            position: absolute;
+            font-size: 14px;
+            top: 31%;
+            left: 5%;
+            pointer-events: none;
+        }
+        #icon-2{
+            position: absolute;
+            right: 22%;
+            top: 15%;
+            pointer-events: none;
+        }
+        .selekt{  
+            color: $footertext;                         
+            font-size: 0.9rem;
+            appearance: none;
+            height: 35px;
+            width: 100%;
+            max-width: 120px;
+            min-width: 100px;
+            background: transparent;
+            text-align: center;
+            margin-right: 30px;
+            option{
+                background: $primary1; 
+            }
+        }
+    }
+}
+p{
+    margin-top: 30px;
+    color: $footertext;
+}
+            
+         
+//*************** MEDIA QUERIES MAX-WIDTH 950px *****************************
+
+@media (max-width: 950px){
+    .content-wrapper {
+        text-align: center;
+        flex-direction: column;
+    }
+    .second-section-wrapper, .content-wrapper-1{
+        text-align: center;
+        flex-direction: column;
+        flex-flow: column-reverse; 
+    }
+
+    .section-3-video{
+        height: 215px;
+        width: auto;
+        position: absolute;
+        top: -20px;
+        left: 12px;
+        z-index: -1;
+        transform: translateX(2%);
+    }
+    //*************** FAQ SECTION QUERIES *****************************
+    #faq-section{
+        padding: 0;  
+        h1{
+            font-size: 2rem;
+        }
+    }
+    .faq-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .acc-item{
+            width: 85%;
+        }
+        h2{
+            font-size: 1.2rem;
+        }
+    }
+    
+    .form-wrapper{
+        flex-direction: column;
+    }
+
+    .button-wrapper{
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    .btn-email{
+        max-width: 150px;
+        width: 100%;
+        max-height: 50px;
+        height: 100%;
+        span{
+           margin-left: 15px;
+           font-size: 1.125rem;
+        }
+        svg{
+            transform: translateY(2px);   
+        }
+    }
+    
+        
+} 
+
+
+
+
+
+
+
+@media (max-width: 550px){
+
+    //*************** HEADER TOP SECTION STYLING FOR max-width: 550px  *****************************
+
+    .title-wrapper h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-top-section .selekt-area .icons-align {
+        margin-left: 0;
+    }
+
+    .header-top-section .selekt-area .icons-align .selekt {
+        font-size: 0.7rem; 
+        height: 30px;
+        min-width: 80px;
+        margin-right: 8px;
+    }
+    .header-top-section .selekt-area .icons-align .btn-signin{
+        min-width: 60px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+
+    .header-top-section .selekt-area .icons-align #icon-1{
+        font-size: 10px;
+        top: 40%;
+        left: 10%;
+
+    }
+    .header-top-section .selekt-area .icons-align #icon-2{
+        left: 44%;
+        top: 28%;
+    }
+
+    //*************** FOOTER RESPONSIVE STYLES *****************************
+    .footer-link {
+        margin-right: 5px;
+    }
+}
+
+
+//*************** MEDIA QUERIES MAX - WIDTH 490px *****************************
+
+@media (max-width: 490px){
+    h1{
+        font-size: 1.625rem;
+    }
+    h3{
+        font-size: 1.125rem;
+        font-weight: 100;
+    }
+
+    //*************** HEADER SECTION SEARCH BAR STYLE ********************
+
+    .search-form #search {
+        width: 300px;
+    }
+
+    //*************** SECOND SECTION QUERIES *****************************
+
+    .background-img{
+        min-width: 350px;
+    }
+    .mob-animation-container{
+        width: 50%;
+        min-width: 12rem;
+        height: 60px;
+    }
+    .mobile-text{
+        flex-basis: 50%;
+        .text-1{
+            font-size: 0.7rem;
+        }
+        .text-2{
+            font-size: 0.7rem;
+        }
+    }
+    .dwnl-animation{
+        img{
+            max-height: 50px;
+        }
+    }
+    
+                
+    //*************** FAQ SECTION QUERIES *****************************
+   
+    #faq-section{
+        padding: 0;
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+    .faq-wrapper{
+        width: 100%;
+        .acc-item{
+            width: 100%;
+            .acc-title{
+                padding: 10px;
+                margin: 10px;
+                &::after{
+                    top: 5%;
+                    right: 0;
+                    font-size: 35px;
+                }
+            }
+        }
+        h2{
+            font-size: 1.1rem;
+        }    
+    }
+    .email-form{
+        h4{
+            font-size: 12px;
+        }
+    }
+
+}
+
+
+
+
+
+
+

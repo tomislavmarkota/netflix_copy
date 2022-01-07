@@ -1,0 +1,1 @@
+Open project with live server, otherwise fetch api won't work!
